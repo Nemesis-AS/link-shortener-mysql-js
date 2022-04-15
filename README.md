@@ -4,9 +4,9 @@ A basic link shortener made using NodeJS and MySQL
 
 ## Stack
 
-**Frontend** - VanillaJS
-**Backend** - NodeJS
-**Database** - MySQL
+**Frontend** - VanillaJS  
+**Backend** - NodeJS  
+**Database** - MySQL  
 
 ## Setup
 
@@ -27,5 +27,5 @@ Next, create a file named `.env` inside the `backend` folder and put your MySQL 
 ```
 MYSQL_PASSWORD=<YOUR-PASSWORD>
 ```
-And you're ready to go!
+And you're ready to go!  
 Run `npm start` to start the server, and use a web server to serve the files inside the `frontend` directory.
