@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Shortener</title>
+    <link rel="stylesheet" href="./src/css/index.css" />
+</head>
+<body>
+    <header>
+        <div class="brand nav-link" id="homeLink">Link Shortener</div>
+        <nav>
+            <div class="nav-link logged-in" id="myLinks">My Links</div>
+            <div class="nav-link logged-in" id="logoutBtn">Logout</div>
+            <div class="nav-link loginLink logged-out">Login</div>
+            <div class="nav-link register loginLink logged-out">Register</div>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="mainPage" class="main-page">
+            <div class="head-text">URL Shortener</div>
+        
+            <div class="input-row">
+                <input type="url" placeholder="https://example.com" pattern="https://.*" id="urlInput" />
+                <button id="shorten">Shorten</button>
+            </div>
+        </div>
+        
+        <div id="linkPage" class="my-links hidden">
+            <div class="head-text">My Links</div>
+
+            <table class="link-table">
+                <thead class="link-head">
+                    <th>Sr. No</th>
+                    <th>ID</th>
+                    <th>Link</th>
+                    <th>Visits</th>
+                </thead>
+                <tbody id="linkBody" class="link-body">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>Made with ❤️ by <a href="https://github.com/Nemesis-AS" target="_blank">Nemesis&trade;</a></footer>
+
+    <div class="modal-overlay hidden" id="modalOverlay">
+        <div class="modal hidden" id="loginModal">
+            <div class="close-btn" data-modal="loginModal">&times;</div>
+            <div class="head">Login/Register</div>
+            <div class="input-col">
+                <label for="">Username: </label>
+                <input type="text" id="usernameInput" />
+            </div>
+            <div class="input-col">
+                <label for="">Password: </label>
+                <input type="password" id="passwordInput" />
+            </div>
+            <div class="btn-row">
+                <button id="loginBtn" class="login-btn">Login</button>
+                <button id="registerBtn" class="register-btn">Register</button>
+            </div>
+        </div>
+
+        <div class="modal hidden" id="linkModal">
+            <div class="close-btn" data-modal="linkModal">&times;</div>
+            <div class="head">Link Created Successfully!</div>
+            <div class="body-text">Here's your link: </div>
+            <code id="shortLink">http://localhost:3000/link/wgwgehee</code>
+            <div class="btn-row">
+                <button class="register-btn" id="copyToClipboardBtn">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/js/index.js"></script>
+</body>
+</html>
